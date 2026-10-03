@@ -3,142 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>A Little Surprise 💗</title>
 
 <style>
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
 body{
   margin:0;
-  font-family:Arial,sans-serif;
-  background:linear-gradient(135deg,#fff7fb,#fff0f5);
-  color:#4b3541;
-  text-align:center;
-}
-
-.container{
-  max-width:600px;
-  margin:auto;
-  padding:20px;
-}
-
-.hero{
-  min-height:95vh;
+  min-height:100vh;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(135deg,#fff1f7,#f5edff);
+  color:#513c49;
   display:flex;
-  flex-direction:column;
   justify-content:center;
   align-items:center;
-}
-
-.heart{
-  font-size:65px;
-  animation:float 2s infinite ease-in-out;
-}
-
-@keyframes float{
-  50%{transform:translateY(-10px)}
-}
-
-h1{
-  font-size:40px;
-  color:#c85f7d;
-  margin:10px;
-}
-
-h2{
-  color:#c85f7d;
+  padding:20px;
+  overflow-x:hidden;
 }
 
 .card{
-  background:white;
-  padding:25px;
-  margin:20px 0;
-  border-radius:25px;
-  box-shadow:0 10px 30px rgba(190,80,120,.12);
-}
-
-.note{
-  background:#fff;
-  padding:18px;
-  margin:14px 0;
-  border-radius:20px;
-  text-align:left;
-}
-
-button{
-  border:0;
-  padding:14px 23px;
-  border-radius:30px;
-  background:#c85f7d;
-  color:white;
-  font-size:16px;
-  margin:7px;
-}
-
-button:active{
-  transform:scale(.96);
-}
-
-.hidden{
-  display:none;
-}
-
-.final{
-  background:#ffe9f1;
+  width:100%;
+  max-width:430px;
+  background:rgba(255,255,255,.88);
   border-radius:28px;
-  padding:30px;
-  margin:30px 0;
+  padding:30px 22px;
+  text-align:center;
+  box-shadow:0 15px 40px rgba(120,70,100,.15);
+  position:relative;
+  overflow:hidden;
 }
 
-.small{
+.heart{
+  position:absolute;
+  font-size:24px;
+  animation:float 4s infinite ease-in-out;
   opacity:.7;
-  font-size:14px;
 }
 
-footer{
-  padding:30px;
-  font-size:13px;
-  opacity:.6;
+.h1{top:15px;left:18px}
+.h2{top:35px;right:20px}
+.h3{bottom:25px;left:25px}
+.h4{bottom:20px;right:25px}
+
+@keyframes float{
+  0%,100%{transform:translateY(0) rotate(-5deg)}
+  50%{transform:translateY(-12px) rotate(5deg)}
 }
-</style>
-</head>
 
-<body>
+.screen{
+  display:none;
+  animation:fade .45s ease;
+}
 
-<div class="container">
+.screen.active{
+  display:block;
+}
 
-<section class="hero">
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
 
-<div class="heart">🎀💗🎀</div>
+.emoji{
+  font-size:58px;
+  margin-bottom:10px;
+}
 
-<p>A little surprise made especially for</p>
+h1{
+  font-size:28px;
+  margin:8px 0 12px;
+}
 
-<h1>Aarav</h1>
+h2{
+  font-size:23px;
+  margin:10px 0 15px;
+}
 
-<p>
-Because someone as special as you deserves
-something a little different. 🥹
-</p>
-
-<button onclick="openSurprise()">
-Open your surprise 💌
-</button>
-
-<div id="welcome" class="card hidden">
-<p>
-Hehe, you actually opened it. 👀❤️
-Now keep going... there's more.
-</p>
-</div>
-
-</section>
-
-
-<section>
-
-<h2>Little things I want you to know 🌷</h2>
-
-<div class="note">
-<h3>💗 One little thing</h3>
-<p>
-You make even
+p{
+  font-size:16px;
+  line-height:1.6;
+  margin:
