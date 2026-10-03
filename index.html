@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Surprise 💗</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#fff7fb,#fff0f5);
+  color:#4b3541;
+  text-align:center;
+}
+
+.container{
+  max-width:600px;
+  margin:auto;
+  padding:20px;
+}
+
+.hero{
+  min-height:95vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.heart{
+  font-size:65px;
+  animation:float 2s infinite ease-in-out;
+}
+
+@keyframes float{
+  50%{transform:translateY(-10px)}
+}
+
+h1{
+  font-size:40px;
+  color:#c85f7d;
+  margin:10px;
+}
+
+h2{
+  color:#c85f7d;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  margin:20px 0;
+  border-radius:25px;
+  box-shadow:0 10px 30px rgba(190,80,120,.12);
+}
+
+.note{
+  background:#fff;
+  padding:18px;
+  margin:14px 0;
+  border-radius:20px;
+  text-align:left;
+}
+
+button{
+  border:0;
+  padding:14px 23px;
+  border-radius:30px;
+  background:#c85f7d;
+  color:white;
+  font-size:16px;
+  margin:7px;
+}
+
+button:active{
+  transform:scale(.96);
+}
+
+.hidden{
+  display:none;
+}
+
+.final{
+  background:#ffe9f1;
+  border-radius:28px;
+  padding:30px;
+  margin:30px 0;
+}
+
+.small{
+  opacity:.7;
+  font-size:14px;
+}
+
+footer{
+  padding:30px;
+  font-size:13px;
+  opacity:.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<section class="hero">
+
+<div class="heart">🎀💗🎀</div>
+
+<p>A little surprise made especially for</p>
+
+<h1>Aarav</h1>
+
+<p>
+Because someone as special as you deserves
+something a little different. 🥹
+</p>
+
+<button onclick="openSurprise()">
+Open your surprise 💌
+</button>
+
+<div id="welcome" class="card hidden">
+<p>
+Hehe, you actually opened it. 👀❤️
+Now keep going... there's more.
+</p>
+</div>
+
+</section>
+
+
+<section>
+
+<h2>Little things I want you to know 🌷</h2>
+
+<div class="note">
+<h3>💗 One little thing</h3>
+<p>
+You make even
